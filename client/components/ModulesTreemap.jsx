@@ -317,6 +317,7 @@ export default class ModulesTreemap extends Component {
         {this.renderModuleSize(module, 'stat')}
         {!module.inaccurateSizes && this.renderModuleSize(module, 'parsed')}
         {!module.inaccurateSizes && this.renderModuleSize(module, 'gzip')}
+        {module.percentageUsed !== undefined && <div>Percentage used: <strong>{module.percentageUsed}%</strong></div>}
         {module.path &&
           <div>Path: <strong>{module.path}</strong></div>
         }
